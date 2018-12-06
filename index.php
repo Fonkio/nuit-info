@@ -10,14 +10,22 @@
 		$json = json_decode($json);
 		?>
 
+		<img src="<?php echo $json->current_condition->icon; ?>" width="45"
+		height="45" />
+
 		<?php 
-		echo $json->current_condition->icon; echo("<br/>");
 		echo $json->current_condition->temperature;
+		echo("<br/>");
 		echo $json->current_condition->hour;
+		echo("<br/>");
 		echo $json->current_condition->wnd_spd;
+		echo("<br/>");
 		echo $json->current_condition->humidity;
+		echo("<br/>");
 		echo $json->current_condition->pressure;
+		echo("<br/>");
 		echo $json->current_condition->condition;
+		echo("<br/>");
 		?>
 
 
