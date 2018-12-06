@@ -7,19 +7,26 @@
 	<body>
 		<div>
 		<?php
-		$json = file_get_contents('api.openweathermap.org/data/2.5/weather?q=Paris');
+		$json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=2bfdee59a56e15b43261e3c819b631f2');
 		$json = json_decode($json);
+		$lol = '1h'
 		?>
 
 
 
 		<?php 
-		echo ("Temperature");
-		echo $json->main.temp;
+		echo $json->coord->lon;
+		echo $json->coord->lat;
+		echo ("Temperature ");
+		echo $json->main->temp-273;
 		echo (" °C");
-		// echo("<br/>");
-		// echo $json->current_condition->hour;
-		// echo("<br/>");
+		echo("<br/>");
+		echo $json->main->pressure;
+		echo("<br/>");
+		echo $json->main->humidity;	
+		echo $json->wind->speed;
+		echo ($json->rain->1h);
+		
 		// echo $json->current_condition->wnd_spd;
 		// echo("<br/>");
 		// echo $json->current_condition->humidity;
@@ -28,7 +35,7 @@
 		// echo("<br/>");
 		// echo $json->current_condition->condition;
 		// echo("<br/>");
-		// ?>
+		?>
 		</div>
 
 		<header id="bandeau" style="min-height:100px; text-align:center;">
