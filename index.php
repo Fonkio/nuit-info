@@ -2,65 +2,28 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Observationis</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<title>Mon Cockpit</title>
 	</head>
 	<body>
 		<div>
 		<?php
-		$json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Paris,fr&appid=2bfdee59a56e15b43261e3c819b631f2');
+		$json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Windhoek,%20NA&appid=2bfdee59a56e15b43261e3c819b631f2');
 		$json = json_decode($json);
-		$lol = '1h'
+		$tempDegC = $json->main->temp-273;
 		?>
 
-
-
-		<?php 
-		echo $json->coord->lon;
-		echo $json->coord->lat;
-		echo ("Temperature ");
-		echo $json->main->temp-273;
-		echo (" °C");
-		echo("<br/>");
-		echo $json->main->pressure;
-		echo("<br/>");
-		echo $json->main->humidity;	
-		echo $json->wind->speed;
-		echo ($json->rain->1h);
 		
-		// echo $json->current_condition->wnd_spd;
-		// echo("<br/>");
-		// echo $json->current_condition->humidity;
-		// echo("<br/>");
-		// echo $json->current_condition->pressure;
-		// echo("<br/>");
-		// echo $json->current_condition->condition;
-		// echo("<br/>");
-		?>
-		</div>
-
-		<header id="bandeau" style="min-height:100px; text-align:center;">
-			<img src ="Ressources\Images\logo_blanc.png" height="180" width="320" title="logo d'Observationis">
-		</header>
-		<section id="centreAccueil" align="center">
-			<div id="texteAccueil">
-				<p>Observationis vous sensibilise sur l'usage de vos données et vous fait découvir de nombreux moyens de surveillance existants à ce jour.</p>
-			</div>
-			<div class=image>
-				<a href="Pages\physique.html"><img src="Ressources\Images\camera.png" height="120" width="120" title="Systèmes de surveillance physiques"></a>
-			</div>
-			<div class=image>
-				<a href="Pages\numerique.html"><img src="Ressources\Images\laptop.png" height="120" width="120" title="Systèmes de surveillance numériques"></a>
-			</div>
-			<div class=image>	
-				<a href="Pages\loi.html"><img src="Ressources\Images\Loi.png" height="120" width="120" title="Que dit la loi ?"></a>
-			</div>
-			<div class=image>	
-				<a href="Pages\organisations.html"><img src="Ressources\Images\anonymous.png" height="120" width="120" title="Organisations"></a>
-			</div>
-			<p id="cliquezIci"><em>  Cliquez sur une icône pour commencer la navigation </em><p>
-		</section>
-		<div id="logoIUT">
-			<a href="http://iut.ups-tlse.fr/" target="_blank"><img src="Ressources\Images\logo_iut_info.png" height="98" width="148" title="Logo IUT Inofrmatique" ></a>
+		<ul class="list-group list-group-flush">
+		  <li class="list-group-item"><?php echo ("Longitude : " . $json->coord->lon) ?> </li>
+		  <li class="list-group-item"><?php echo("Latitude : " . $json->coord->lat) ?></li>
+		  <li class="list-group-item"><?php echo ("Temperature : ".$tempDegC." °C") ?></li>
+		  <li class="list-group-item"><?php echo ("Pression athmosphérique : " . $json->main->pressure." hpa") ?></li>
+		  <li class="list-group-item"><?php echo ("Humidité : ".$json->main->humidity."%") ?></li>
+		  <li class="list-group-item"><?php echo ("Vitesse du vent : ".$json->wind->speed."km/h") ?></li>
+		</ul>
+		
 		</div>
 	</body>
 </html>
