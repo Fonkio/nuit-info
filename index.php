@@ -10,9 +10,6 @@
 	<?php
 	$json = file_get_contents('http://www.prevision-meteo.ch/services/json/paris');
 	$json = json_decode($json);
-	?>
-
-	<?php 
 	echo $json->current_condition->icon;
 	echo $json->current_condition->temperature
 	echo $json->current_condition->hour
