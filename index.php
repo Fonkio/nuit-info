@@ -17,7 +17,7 @@
 		
 		<ul class="list-group list-group-flush">
 		  <li class="list-group-item"><?php echo ("Longitude : " . $json->coord->lon) ?> </li>
-		  <li class="list-group-item"><?php echo("Latitude : " . $json->coord->lat) ?></li>
+		  <li class="list-group-item"><?php echo ("Latitude : " . $json->coord->lat) ?></li>
 		  <li class="list-group-item"><?php echo ("Temperature : ".$tempDegC." °C") ?></li>
 		  <li class="list-group-item"><?php echo ("Pression athmosphérique : " . $json->main->pressure." hpa") ?></li>
 		  <li class="list-group-item"><?php echo ("Humidité : ".$json->main->humidity."%") ?></li>
