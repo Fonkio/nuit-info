@@ -1,23 +1,24 @@
 <!doctype html>
 <html lang="fr">
 	<head>
-		<link rel="stylesheet" href="Styles\ptut.css" />
-		<link rel="icon" href="Ressources\Images\favicon.ico" />
 		<meta charset="utf-8">
 		<title>Observationis</title>
 	</head>
 	<body>
-	<?php
-	$json = file_get_contents('http://www.prevision-meteo.ch/services/json/paris');
-	$json = json_decode($json);
-	echo $json->current_condition->icon;
-	echo $json->current_condition->temperature
-	echo $json->current_condition->hour
-	echo $json->current_condition->wnd_spd
-	echo $json->current_condition->humidity
-	echo $json->current_condition->pressure
-	echo $json->current_condition->condition
-	?>
+		<?php
+		$json = file_get_contents('http://www.prevision-meteo.ch/services/json/paris');
+		$json = json_decode($json);
+		?>
+
+		<?php 
+		echo $json->current_condition->icon;
+		echo $json->current_condition->temperature;
+		echo $json->current_condition->hour;
+		echo $json->current_condition->wnd_spd;
+		echo $json->current_condition->humidity;
+		echo $json->current_condition->pressure;
+		echo $json->current_condition->condition;
+		?>
 
 
 		<header id="bandeau" style="min-height:100px; text-align:center;">
