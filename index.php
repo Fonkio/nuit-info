@@ -14,9 +14,9 @@
 		height="45" />
 
 		<?php 
-		echo 'température :' ;
+		// echo 'température :' ;
 		echo $json->current_condition->tmp;
-		echo ' °C';
+		// echo ' °C';
 		echo("<br/>");
 		echo $json->current_condition->hour;
 		echo("<br/>");
