@@ -7,7 +7,7 @@
 	<body>
 		<div>
 		<?php
-		$json = file_get_contents('http://www.prevision-meteo.ch/services/json/tokyo');
+		$json = file_get_contents('http://www.prevision-meteo.ch/services/json/paris');
 		$json = json_decode($json);
 		echo ('test');
 		?>
