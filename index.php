@@ -6,7 +6,7 @@
 	</head>
 	<body>
 		<?php
-		$json = file_get_contents('http://www.prevision-meteo.ch/services/json/paris');
+		$json = file_get_contents('http://www.prevision-meteo.ch/services/json/tokyo');
 		$json = json_decode($json);
 		?>
 
@@ -14,7 +14,7 @@
 		height="45" />
 
 		<?php 
-		echo $json->current_condition->temperature;
+		echo "température :" $json->current_condition->tmp " °C";
 		echo("<br/>");
 		echo $json->current_condition->hour;
 		echo("<br/>");
