@@ -11,8 +11,7 @@
 		$json = json_decode($json);
 		?>
 
-		<img src="<?php echo $json->current_condition->icon; ?>" width="45"
-		height="45" />
+
 
 		<?php 
 		echo $json->current_condition->tmp;
