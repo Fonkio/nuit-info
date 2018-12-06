@@ -14,9 +14,9 @@
 
 
 		<?php 
-		echo 'Temperature'
+		echo ("Temperature");
 		echo $json->current_condition->tmp;
-		echo ' °C';
+		echo (" °C");
 		echo("<br/>");
 		echo $json->current_condition->hour;
 		echo("<br/>");
