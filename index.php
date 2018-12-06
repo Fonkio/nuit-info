@@ -11,7 +11,7 @@
 		?>
 
 		<?php 
-		echo "$json->current_condition->icon; <br>";
+		echo $json->current_condition->icon <br>;
 		echo $json->current_condition->temperature;
 		echo $json->current_condition->hour;
 		echo $json->current_condition->wnd_spd;
