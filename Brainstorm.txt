@@ -23,6 +23,8 @@ Santé
 	tension
 	taux de glucose
 	montre pour la version portable
+	niveau d'oxygen dans le sang
+	Questionnaire de santé : 
 	
 Matériel
 	panneaux solaires
@@ -30,6 +32,7 @@ Matériel
 	robot
 	
 Systèmes de survie
+	
 	
 Camp
 	position gps du camp et du mec
@@ -43,8 +46,8 @@ Conditions météorologiques
 	pression
 	taux d'humidité
 	
-Moyens de communication
-	état du réseau
+Moyens de communication (Téléphone satellite, radio
+	état du réseau (couverture satellite)
 	état d'usure
 	état de charge
 	heure à laquelle il peut avoir le réseau satellite

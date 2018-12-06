@@ -12,8 +12,15 @@
 	$json = json_decode($json);
 	?>
 
-	<img src="<?php echo $json->current_condition->icon; ?>" width="45"
-height="45" />
+	<?php 
+	echo $json->current_condition->icon;
+	echo $json->current_condition->temperature
+	echo $json->current_condition->hour
+	echo $json->current_condition->wnd_spd
+	echo $json->current_condition->humidity
+	echo $json->current_condition->pressure
+	echo $json->current_condition->condition
+	?>
 
 
 		<header id="bandeau" style="min-height:100px; text-align:center;">
