@@ -1,0 +1,61 @@
+pinata
+commentaires
+filles
+404
+chatbot
+
+Cockpit désert de namibie
+Un fond avec une caméra qui filme ce qui se passe à l'extérieur (pour imiter un cockpit genre avion)
+Par dessus, plusieurs indicateurs : Récupérer les prévisions météorologiques pour la journée et la nuit à venir température (via base météo distante ou capteurs) 
+
+Gestions de checklist préétablies + options en fontion de la météo, des conditions prévues
+Gestion de l'état des outils et checklist de leur présence dans les paquetages
+Créer un site à part version portable, ou faire du méga responsive design
+système permettant de faire revenir l'explorateur automotiquement en cas de problème, et d'éppaller des secours externes en cas d'extrème urgence.
+toutes les n secondes, l'explorateur doit envoyer un ping à l'aide d'un bouton. Egalement, on peut tester son temps de réaction après lui avoir envoyé un bip sonore.
+
+L'utilisateur dit quel type de sortie il va effectuer.Le site lui propose des checklists prédéfinies auxquelles il adjoint des points supplémentaires en fonctions des paramètres
+physiologique, météorologiques...
+
+Santé
+	rythme cardiaque
+	niveau de vigilance
+	tension
+	taux de glucose
+	montre pour la version portable
+	
+Matériel
+	panneaux solaires
+	éoliennes
+	robot
+	
+Systèmes de survie
+	
+Camp
+	position gps du camp et du mec
+
+Conditions météorologiques
+	température journée
+	temp nuit
+	temp actuelle
+	alerte vague de chaleur, tempête de sable etc...
+	vent
+	pression
+	taux d'humidité
+	
+Moyens de communication
+	état du réseau
+	état d'usure
+	état de charge
+	heure à laquelle il peut avoir le réseau satellite
+	
+Vivre & eau
+	quantité eau restante
+	nourriture + date de péremption
+	
+Check list en fontion du type de mission et des paramètres actuels
+	paramètres
+			distance
+			moyen de transport
+			conditions météos
+			
