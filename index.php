@@ -9,11 +9,13 @@
 		<?php
 		$json = file_get_contents('http://www.prevision-meteo.ch/services/json/tokyo');
 		$json = json_decode($json);
+		echo ('test');
 		?>
 
 
 
 		<?php 
+		echo ('test2');
 		echo $json->current_condition->tmp;
 		// echo ' °C';
 		echo("<br/>");
