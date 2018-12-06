@@ -5,6 +5,7 @@
 		<title>Observationis</title>
 	</head>
 	<body>
+		<div>
 		<?php
 		$json = file_get_contents('http://www.prevision-meteo.ch/services/json/tokyo');
 		$json = json_decode($json);
@@ -14,7 +15,6 @@
 		height="45" />
 
 		<?php 
-		// echo 'température :' ;
 		echo $json->current_condition->tmp;
 		// echo ' °C';
 		echo("<br/>");
@@ -29,7 +29,7 @@
 		echo $json->current_condition->condition;
 		echo("<br/>");
 		?>
-
+		</div>
 
 		<header id="bandeau" style="min-height:100px; text-align:center;">
 			<img src ="Ressources\Images\logo_blanc.png" height="180" width="320" title="logo d'Observationis">
