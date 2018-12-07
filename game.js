@@ -855,7 +855,7 @@ class Labirynthe {
 						this.ctx.fillStyle = '#00e435';
 						this.ctx.textAlign = "center";
                         this.ctx.font = "20px Arial";
-                        window.location.href = "index.php";
+                        window.location.href = "changeSession.php";//ICI !!!!!!!!!!!!!!!!
 
 					}
 					break;

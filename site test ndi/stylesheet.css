@@ -1,0 +1,56 @@
+.test {
+	width : 35%;
+	margin-bottom : 50px;
+	margin-left : 20px;
+	margin-right : 20px;
+}
+
+.sante {
+	width : 50%;
+	margin-bottom : 50px;
+	margin-left : 20px;
+	margin-right : 20px;
+		
+	
+}
+.vivres {
+	width : 50%;
+	margin-bottom : 50px;
+	margin-left : 20px;
+	margin-right : 20px;
+		
+	
+}
+.materiels {
+	width : 50%;
+	margin-bottom : 50px;
+	margin-left : 20px;
+	margin-right : 20px;
+		
+	
+}
+.reseau {
+	width : 50%;
+	margin-bottom : 50px;
+	margin-left : 20px;
+	margin-right : 20px;
+		
+	
+}
+.texte {
+	font-size: 20px;
+	margin-bottom : 50px;
+	margin-top : 100px;
+	width :50%;
+}
+.bloc {
+	width :50%;
+	margin-bottom : 50px;
+	margin-top : 50px;
+}
+
+#conteneur {
+display : flex;
+flex-wrap : nowrap; }
+
+

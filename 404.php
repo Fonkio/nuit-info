@@ -7,11 +7,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<h1>ERREUR 404 : Gagne ce labyrinthe pour retourner sur le site</h1>
-<?php 
-	
+<h1>Oups, ERREUR 404 : Sans finir ce mini-jeu, l'accès au site te sera refusé.</h1>
+<h3>Signé : le Pinpix, le chatbot machiavélique</h3>
+<?php
+	session_start();
+	$_SESSION['login']='mauvais';
+	$_SESSION['tmp']='0';
  ?>
-<center><script src="game.js"></script></center>
-</div>
+<center style="margin-top:50px"><script src="game.js"></script></center>
 </body>
 </html>

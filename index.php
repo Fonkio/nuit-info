@@ -9,6 +9,15 @@
 	<body>
 		<div>
 		<?php
+		session_start();
+		if(!isset($_SESSION['login']))//Vérification si c'est vide
+		{
+			$_SESSION['login']='mauvais';
+		}
+		if($_SESSION['tmp'] == '1')//Vérification de la fourberie
+		{
+			$_SESSION['login']='bon';
+		}
 		require('lib.php');
 		estLogin();
 		if (isset($_POST['valide'])){
