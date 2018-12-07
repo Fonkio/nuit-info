@@ -9,20 +9,39 @@
 	<body>
 		<div>
 		<?php
-		$json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q=Windhoek,%20NA&appid=2bfdee59a56e15b43261e3c819b631f2');
-		$json = json_decode($json);
-		$tempDegC = $json->main->temp-273;
-		?>
+		require('lib.php');
+		estLogin();
+		if (isset($_POST['valide'])){
+			$ville=$_POST['ville'];
+			$AB=$_POST['AB'];
+			$json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?q='.$ville.',%20'.$AB.'&appid=2bfdee59a56e15b43261e3c819b631f2');
+			$json = json_decode($json);
+			$tempDegC = $json->main->temp-273;
+			?>			
+			<ul class="list-group list-group-flush">
+			  <li class="list-group-item"><?php echo ("Longitude : " . $json->coord->lon) ?> </li>
+			  <li class="list-group-item"><?php echo ("Latitude : " . $json->coord->lat) ?></li>
+			  <li class="list-group-item"><?php echo ("Temperature : ".$tempDegC." °C") ?></li>
+			  <li class="list-group-item"><?php echo ("Pression athmosphérique : " . $json->main->pressure." hpa") ?></li>
+			  <li class="list-group-item"><?php echo ("Humidité : ".$json->main->humidity."%") ?></li>
+			  <li class="list-group-item"><?php echo ("Vitesse du vent : ".$json->wind->speed."km/h") ?></li>
+			</ul>
+			<?php
+		}
+		else {
+			?>
+			<form method="POST" action="index.php">
+				ville : <input type="text" name="ville">
+				pays : <input type="text" name="AB">
+				<input type="submit" name="valide">
+			</form>
+			<?php
+			} ?>
 
 		
-		<ul class="list-group list-group-flush">
-		  <li class="list-group-item"><?php echo ("Longitude : " . $json->coord->lon) ?> </li>
-		  <li class="list-group-item"><?php echo ("Latitude : " . $json->coord->lat) ?></li>
-		  <li class="list-group-item"><?php echo ("Temperature : ".$tempDegC." °C") ?></li>
-		  <li class="list-group-item"><?php echo ("Pression athmosphérique : " . $json->main->pressure." hpa") ?></li>
-		  <li class="list-group-item"><?php echo ("Humidité : ".$json->main->humidity."%") ?></li>
-		  <li class="list-group-item"><?php echo ("Vitesse du vent : ".$json->wind->speed."km/h") ?></li>
-		</ul>
+
+		
+
 		
 		</div>
 	</body>
